@@ -9,9 +9,9 @@
     <title>JimmyTran</title>
     <meta
       name="description"
-      content="Wave is a Bootstrap 5 One Page Template."
+      content="Jimmy Tran Bootstrap 5 One Page Template."
     />
-    <meta name="author" content="BootstrapBrain" />
+    <meta name="author" content="JimmyTran" />
 
     <!-- Favicon and Touch Icons -->
     <link
@@ -38,6 +38,52 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <!-- BSB Head -->
+
+    <style>
+      .img_container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: transform 0.5s ease;
+        backface-visibility: hidden;
+        border-radius: 10px;
+      }
+
+      .middle {
+        transition: 0.5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+      }
+
+      .img_container:hover .image {
+        -webkit-filter: brightness(50%);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+
+      .img_container:hover .middle {
+        cursor: pointer;
+        opacity: 1;
+      }
+    </style>
   </head>
 
   <body
@@ -59,7 +105,11 @@
       >
         <div class="container">
           <a class="navbar-brand" href="index.html">
-            <img src="./images/fontbolt.png" class="bsb-tpl-logo" alt="" />
+            <img
+              src="./images/JimmyTranGenshin.png"
+              class="bsb-tpl-logo"
+              alt=""
+            />
           </a>
           <button
             class="navbar-toggler border-0"
@@ -158,6 +208,9 @@
                     >Contact</a
                   >
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="resume.html">Resume</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -187,19 +240,19 @@
             </h1>
             <p class="fs-4 mb-5">Inovate, Intergrate, Inspire.</p>
             <div class="d-grid gap-2 d-sm-flex">
-              <button
-                type="button"
+              <a
+                href="resume.html"
                 class="btn btn-outline-warning bsb-btn-3xl rounded-pill"
+                style="text-decoration: none; color: rgb(64, 163, 224)"
+                >Resume</a
               >
-                <a href="#" style="text-decoration: none">Resume</a>
-              </button>
             </div>
           </div>
           <div class="col-12 col-lg-5 text-center">
             <img
               class="img-fluid"
               loading="lazy"
-              src="./images/pictureAvatar.jpg"
+              src="./images/PictureAvatarFull.jpeg"
               alt=""
               style="
                 -webkit-mask-image: url(./assets/img/hero/hero-blob-1.svg);
@@ -360,93 +413,139 @@
 
         <div class="container overflow-hidden">
           <div class="row gy-2 g-md-2 g-xl-3 bsb-project-2-grid">
+            <!-- GAMEQUEST -->
             <div class="col-12 col-md-4 bsb-project-2-item">
-              <figure
-                class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0"
-              >
-                <a href="http://52.14.238.144:8080/BootGameQuest">
-                  <img
-                    class="img-fluid bsb-scale-up bsb-hover-scale"
-                    src="./images/GameQuestSD.jpeg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <h3 class="text-white bsb-hover-fadeInLeft">Game Quest</h3>
-                  <div class="text-white bsb-hover-fadeInRight">Full stack</div>
-                  <div class="text-white bsb-hover-fadeInRight">
-                    User: admin / password: admin
-                  </div>
-                  <div class="text-white bsb-hover-fadeInRight">
-                    User: BillyBob / password: 123
-                  </div>
-                  <div class="text-white bsb-hover-fadeInRight">
+              <div class="img_container">
+                <img
+                  src="./images/GameQuestSD.jpeg"
+                  alt="Avatar"
+                  class="image"
+                  style="width: 100%"
+                />
+                <div class="middle">
+                  <h3 class="text-white">Game Quest</h3>
+                  <div class="text-white">Java Full Stack</div>
+                  <div class="text-white">Username: BillyBob/ Pass: 123</div>
+                  <div class="text-white">Username: admin/ Pass: admin</div>
+                  <div>
                     <a
                       href="http://52.14.238.144:8080/BootGameQuest"
-                      class="btn btn-outline-success"
-                      style="text-decoration: none; color: white"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
                       >Demo</a
                     >
+                    <a
+                      href="https://github.com/JimmyTran1206/MidtermProject"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Github</a
+                    >
                   </div>
-                </figcaption>
-              </figure>
+                </div>
+              </div>
             </div>
+            <!-- END GAMEQUEST -->
 
+            <!-- SNAKE TRACKER -->
             <div class="col-12 col-md-4 bsb-project-2-item">
-              <figure
-                class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0"
-              >
-                <a href="http://52.14.238.144:8080/RESTSnakeTracker">
-                  <img
-                    class="img-fluid bsb-scale bsb-hover-scale-up"
-                    src="./images/SnakeTrackerSD.jpeg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <h3 class="text-white bsb-hover-fadeInUp">Snake Tracker</h3>
-                  <div class="text-white bsb-hover-fadeInDown">Full Stack</div>
-                </figcaption>
-              </figure>
+              <div class="img_container">
+                <img
+                  src="./images/SnakeTrackerSD.jpeg"
+                  alt="Avatar"
+                  class="image"
+                  style="width: 100%"
+                />
+                <div class="middle">
+                  <h3 class="text-white">Snake Tracker</h3>
+                  <div class="text-white">Java Full Stack</div>
+                  <div>
+                    <a
+                      href="http://52.14.238.144:8080/RESTSnakeTracker/"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Demo</a
+                    >
+                    <a
+                      href="https://github.com/JimmyTran1206/EventTrackerProject"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Github</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- END SNAKE TRACKER -->
 
+            <!-- POKEDEX -->
             <div class="col-12 col-md-4 bsb-project-2-item">
-              <figure
-                class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0"
-              >
-                <a href="http://52.14.238.144:8080/BootMVCPokemonStats/">
-                  <img
-                    class="img-fluid bsb-scale-up bsb-hover-scale"
-                    src="./images/PokemonSD.jpeg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <h3 class="text-white bsb-hover-fadeInLeft">Pokedex</h3>
-                  <div class="text-white bsb-hover-fadeInRight">Full Stack</div>
-                </figcaption>
-              </figure>
+              <div class="img_container">
+                <img
+                  src="./images/PokemonSD.jpeg"
+                  alt="Avatar"
+                  class="image"
+                  style="width: 100%"
+                />
+                <div class="middle">
+                  <h3 class="text-white">Pokedex</h3>
+                  <div class="text-white">Java Full Stack</div>
+                  <div>
+                    <a
+                      href="http://52.14.238.144:8080/BootMVCPokemonStats/"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Demo</a
+                    >
+                    <a
+                      href="https://github.com/JimmyTran1206/JPACRUDProject"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Github</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- END POKEDEX -->
 
+            <!-- ENCHANTED JOB POSTING -->
             <div class="col-12 col-md-4 bsb-project-2-item">
-              <figure
-                class="rounded rounded-3 overflow-hidden bsb-overlay-hover m-0"
-              >
-                <a href="http://52.14.238.144:8080/EnchantedJobPostings/#/home">
-                  <img
-                    class="img-fluid bsb-scale bsb-hover-scale-up"
-                    src="./images/EnchantedJobPostings.jpeg"
-                    alt=""
-                  />
-                </a>
-                <figcaption>
-                  <h3 class="text-white bsb-hover-fadeInUp">
-                    Enchanted Job Posting
-                  </h3>
-                  <div class="text-white bsb-hover-fadeInDown">Full Stack</div>
-                </figcaption>
-              </figure>
+              <div class="img_container">
+                <img
+                  src="./images/EnchantedJobPostings.jpeg"
+                  alt="Avatar"
+                  class="image"
+                  style="width: 100%"
+                />
+                <div class="middle">
+                  <h3 class="text-white">Enchanted Job Posting</h3>
+                  <div class="text-white">Java Full Stack</div>
+                  <div>
+                    <a
+                      href="http://52.14.238.144:8080/EnchantedJobPostings/#/home"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Demo</a
+                    >
+                    <a
+                      href="https://github.com/JimmyTran1206/FinalProject"
+                      target="_blank"
+                      class="btn btn-outline-success m-2"
+                      style="text-decoration: none; color: goldenrod"
+                      >Github</a
+                    >
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- END ENCHANTED JOB POSTING -->
           </div>
         </div>
       </section>
@@ -622,7 +721,7 @@
                           </p>
 
                           <p>
-                            <i class="fa-duotone fa-frame"></i> Wireframe:
+                            <i class="fa-solid fa-crop-simple"></i> Wireframe:
                             <img
                               src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
                               alt=""
@@ -798,7 +897,7 @@
               <img
                 class="img-fluid rounded"
                 loading="lazy"
-                src="images/pictureAvatar.jpg"
+                src="./images/PictureAvatarFull.jpeg"
                 alt=""
               />
             </div>
@@ -833,7 +932,7 @@
                       </address>
                     </div>
                   </div>
-                  <div class="d-flex mb-4">
+                  <!-- <div class="d-flex mb-4">
                     <div class="me-4 text-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -856,7 +955,7 @@
                         >
                       </p>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="d-flex">
                     <div class="me-4 text-primary">
                       <svg
@@ -918,11 +1017,11 @@
                 <address class="mb-4">
                   Los Angeles and San Diego Metropolitan Area
                 </address>
-                <p class="mb-1">
+                <!-- <p class="mb-1">
                   <a class="link-secondary text-decoration-none" href=""
                     >(323) 470-6604</a
                   >
-                </p>
+                </p> -->
                 <p class="mb-0">
                   <a
                     class="link-secondary text-decoration-none"
@@ -952,14 +1051,7 @@
                       >Github</a
                     >
                   </li>
-                  <li class="mb-2">
-                    <a
-                      href="#!"
-                      class="link-secondary text-decoration-none"
-                      target="_blank"
-                      >Profile</a
-                    >
-                  </li>
+
                   <li class="mb-2">
                     <a
                       href="#!"
@@ -980,13 +1072,14 @@
         <div class="container overflow-hidden">
           <div class="row gy-4 gy-md-0">
             <div class="col-xs-12 col-md-7 order-1 order-md-0">
-              <div class="copyright text-center text-md-start">
-                &copy; 2024. All Rights Reserved.
-              </div>
+              <!-- <div class="copyright text-center text-md-start">
+                &copy; 2024 Jimmy Tran. All Rights Reserved.
+              </div> -->
               <div
                 class="credits text-secondary text-center text-md-start mt-2 fs-7"
               >
-                Built with <span class="text-primary">&#9829;</span>
+                Built by Jimmy Tran with
+                <span class="text-primary">&#9829;</span>
               </div>
             </div>
           </div>
